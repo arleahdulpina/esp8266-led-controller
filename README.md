@@ -9,12 +9,16 @@
 Requirements
 - `pip install esptool`
 - `pip install setuptools`
+
+Make sure you have a working firmware for your device. 
+
+i.e. - `esp8266-1m-20200902-v1.13.bin` for an ESP8266
   
 Erase Flash
 - `python -m esptool --port /dev/ttyUSB0 erase_flash`
 
 Deploy MicroPython Firmware
-- `python -m esptool --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect 0 esp8266-1m-20200902-v1.13.bin`
+- `python -m esptool --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect 0 bin/esp8266-1m-20200902-v1.13.bin`
 
 # REPL
 ## WIFI
